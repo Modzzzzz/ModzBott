@@ -6,7 +6,7 @@ from discord.ext import commands
 
 
 client = commands.Bot(command_prefix= '/')
-token = 'NzA5MDMwMjYxNjA1NzkzODAz.XrqXIg.c-vwUsX-wQc7pTRO11qBOeDN45E'
+token = 'NzA5MDMwMjYxNjA1NzkzODAz.Xr-_mg.72UZZ38qbAMM1Igdnk-HtvWQhcs'
 
 @client.event
 async def on_ready():
