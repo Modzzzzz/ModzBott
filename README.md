@@ -44,4 +44,27 @@ A place where all things to do with the ModzBott is found. Commands that require
 >Send a random meme. These memes are chosen from the developer.         
 > **If you have a meme you want added to the bot join the [Support Server](https://discord.gg/nzEnYtZ)**
 ##### m/clear
->This command makes the bot remove 100 messages from the channel the command is used in. This command is way more developed compared to the others. Please refer to [m/clear Details](#clear-parameters)
+>This command makes the bot remove 100 messages from the channel the command is used in. This command is way more developed compared to the others. Please refer to [m/clear Details]**(#clear-parameters.)**
+##### m/cutecat
+>Using this command will make the bot send a random image of a cute cat or kitten.          
+> **To use this command use m/cutecat**
+> **This command sends the picture to the channel the command was used in.**
+##### m/cutedog
+>This command is the exact same as m/cutecat but it is for dogs or puppies.       
+> **To use this command use m/cutedog**       
+> **Just like the cute cat command, this command will send the picture to the channel the command is used in.**
+##### m/flipcoin
+>This command will make the bot flip in imaginary coin and say the answer.
+> **To use this command use m/flipcoin**        
+> <samp>Possible outcomes: **Heads**, **Tails** </samp>
+##### m/support
+>This command sends the link to the support server.       
+> **To use this command use m/support.**        
+> **This command will sya the embed where the command is used.**
+##### m/commands
+>This commands sends a rather large embed containing all the command aavailable for ModzBott.       
+> **To use this command use m/commands**
+
+
+
+### Clear parameters.
