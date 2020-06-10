@@ -17,3 +17,17 @@ A place where all things to do with the ModzBott is found.
 >This command tells you how cool you really are. The output is random between 0% and 100%.        
 > <samp>To use this command use **m/cookcheck**. </samp>        
 > **Just like the help command, this command sends the output to the channel it is used in.**
+##### m/needfood
+>This command will give you a random food stuff.        
+> <samp>Possible foods: apple, banana, mango, grape, chocolate, pizza, pasta meal, cheese, butter, pancake, cake, cupcake, ice cream. </samp>       
+> **To use this command use m/needfood**.
+##### m/invite
+>Get an invite link to add the bot to your server.        
+> **To use this command just say m/invite**.
+##### m/quote
+>Make the bot send a random inspirational quote from well known people in the world.        
+> **To use this command just use m/quote.       
+> It will send the quote in the channel the command is used in.**
+##### m/meme
+>Send a random meme. These memes are chosen from the developer.         
+> **If you have a meme you want added to the bot join the [Support Server](https://discord.gg/nzEnYtZ)
