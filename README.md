@@ -1,5 +1,17 @@
+<a href="https://top.gg/bot/709030261605793803" >
+  <img src="https://top.gg/api/widget/status/709030261605793803.svg" alt="ModzBott" />
+</a>
+<a href="https://top.gg/bot/709030261605793803" >
+  <img src="https://top.gg/api/widget/owner/709030261605793803.svg" alt="ModzBott" />
+</a>
+<a href="https://top.gg/bot/709030261605793803" >
+  <img src="https://top.gg/api/widget/lib/709030261605793803.svg" alt="ModzBott" />
+</a>
+
 # ModzBott
-A place where all things to do with the ModzBott is found.
+A place where all things to do with the ModzBott is found. Commands that require new contents will hopefully be updated regularly.
+
+<samp> Helpful links: [Support Server](https://discord.gg/nzEnYtZ), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List]()
 
 ### Available Commands:
 ##### m/hello
@@ -30,4 +42,6 @@ A place where all things to do with the ModzBott is found.
 > It will send the quote in the channel the command is used in.**
 ##### m/meme
 >Send a random meme. These memes are chosen from the developer.         
-> **If you have a meme you want added to the bot join the [Support Server](https://discord.gg/nzEnYtZ)
+> **If you have a meme you want added to the bot join the [Support Server](https://discord.gg/nzEnYtZ)**
+##### m/clear
+>This command makes the bot remove 100 messages from the channel the command is used in. This command is way more developed compared to the others. Please refer to [m/clear Details](#clear-parameters)
