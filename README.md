@@ -62,9 +62,22 @@ A place where all things to do with the ModzBott is found. Commands that require
 > **To use this command use m/support.**        
 > **This command will sya the embed where the command is used.**
 ##### m/commands
->This commands sends a rather large embed containing all the command aavailable for ModzBott.       
+>This command sends a rather large embed containing all the command aavailable for ModzBott.       
 > **To use this command use m/commands**
-
+##### m/gifmeme
+>This command sends a meme but as a GIF file. Even better than a normal meme.       
+> **To use this command usem/gifmeme.**        
+> **This command will say the gif meme in the channel the command is used in.**
 
 
 ### Clear parameters.
+>As shows earlier in this document, the clear command is way more developed compared to all the other commands available. This is due to the amount of ways you can use the command. Hence why there is a section in this document talking about the parameters for the **clear command**.     
+> **m/clear** - This is the basic command and removes 100 messages at a time.
+
+> **m/<samp>[amount]clear </samp>**- Makes the bot remove as many messages as **you** want. This command is easy but a little more awkward comapred to **m/clear** as the wya it is was the only way it would work.       
+<samp>Examples: </samp>       
+>To clear 2 messages use **m/2clear**       
+>To clear 5 messages use **m/5clear**       
+>To clear 56 messages use **m/56clear**       
+
+>This command allows you to clear up to 100 messages in this form.
