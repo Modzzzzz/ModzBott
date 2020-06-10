@@ -11,6 +11,8 @@
 # ModzBott
 A place where all things to do with the ModzBott is found. Commands that require new contents will hopefully be updated regularly.
 
+### Required Permission: <samp>MANAGE MESSAGES </samp>
+
 <samp> Helpful links: [Support Server](https://discord.gg/nzEnYtZ), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List]()
 
 ### Available Commands:
@@ -81,3 +83,15 @@ A place where all things to do with the ModzBott is found. Commands that require
 >To clear 56 messages use **m/56clear**       
 
 >This command allows you to clear up to 100 messages in this form.
+
+> **m/autoclear** - This command makes the bot automatically clear messages from the channel the command was used in. However you will need another bot to do this. **Join the support server for details.**
+
+> **m/<samp>[amount]autoclear </samp>** - Makes the bot automatically delete as many messages as **you** want.        
+> **Just like the m/autoclear command, you will need another bot for this.**        
+> **Join the support server for details.**
+
+### Common Issues:
+> **My bot is offline.** - If your bot is offline it is either because it timed out or because the host performed a restart.       
+> if your bot is offline you **MUST** join the [support server](https://discord.gg/nzEnYtZ) and let the developer know.
+
+> **The bot will not clear messages.** - If the bot does not clear messages make sure that is has the **<samp>MANAGE MESSAGES </samp>** permission. It needs this to function.
