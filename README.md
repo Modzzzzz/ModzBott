@@ -96,4 +96,4 @@ A place where all things to do with the ModzBott is found. Commands that require
 
 > **The bot will not clear messages.** - If the bot does not clear messages make sure that is has the **<samp>MANAGE MESSAGES </samp>** permission. It needs this to function.
 
-> **The auto clear is not working.** - If the auto clear is not working it could mean many things. It could mean that there is a bug in the code or insufficient permissions. Please refer to the [permissions](#Required Permission: MANAGE MESSAGES) for details on what permission this needs. 
+> **The auto clear is not working.** - If the auto clear is not working it could mean many things. It could mean that there is a bug in the code or insufficient permissions. Please refer to the [permissions](#Required-Permission:-MANAGE-MESSAGES) for details on what permission this needs. 
