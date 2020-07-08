@@ -2,8 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The table below shows you which versions of ModzBott currently support the security checks.
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -13,11 +12,9 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you happen to notice a flaw or vulnerability about this please message MindofModz in the support server. Make sure you use private message to ensure the most privacy.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Once you message, the problem will be solved as soon as it possibly can. 
 
 ##### Note to Modz, 
 > Add :white_check_mark: when supported.
