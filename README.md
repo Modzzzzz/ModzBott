@@ -62,6 +62,8 @@ A place where all things to do with the ModzBott is found. Commands that require
 >This command will make the bot flip in imaginary coin and say the answer.
 > **To use this command use m/flipcoin**        
 > <samp>Possible outcomes: **Heads**, **Tails** </samp>
+##### m/qpoll
+>This command will make the bot add a tick, cross and question mark emoji to your message. Please make sure you put the question in ** ** to be sure people can read the question as it will not remove the command prefix.
 ##### m/support
 >This command sends the link to the support server.       
 > **To use this command use m/support.**        
