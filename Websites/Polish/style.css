@@ -1,0 +1,258 @@
+body{
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "bahnschrift", cursive;
+}
+.btn{
+    width: 200px;
+    height: 80px;
+    background: #3498db;
+    border: 4px solid;
+    color: white;
+    font-weight: 700;
+    left:32.75%;
+    bottom: 47%;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+}
+
+.btn::before,.btn::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #242424;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+.btn::before{
+    top: -4px;
+    left: 10%;
+}
+.btn::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn:hover::before{
+    left: 80%;
+}
+.btn:hover::after{
+    right: 80%;
+}
+.dropdown{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 10.4%;
+    left: 32.8%;
+    bottom: 17.75%;
+    background: #ccc;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: 0.5s;
+}
+ul.active{
+    transform: perspective(1000px) rotateX(-90deg);
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0, 2);
+}
+ul li a:hover{
+   background: #3498db;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+p{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+    padding: 0;
+    position: absolute;
+    top: 35%;
+    left: 23.25%;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -10%;
+    left: 5%;
+}
+h3{
+    color: white;
+    font-size: 67px;
+    bottom: 30%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+h4{
+    color: white;
+    font-size: 30px;
+    bottom: -16%;
+    left: 28%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+h5{
+    color: white;
+    font-size: 30px;
+    bottom: -13%;
+    left: 28%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+h6{
+    color: white;
+    font-size: 30px;
+    bottom: -10%;
+    left: 28%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+h7{
+    color: white;
+    font-size: 30px;
+    bottom: -7%;
+    left: 28%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+h8{
+    color: white;
+    font-size: 50px;
+    bottom: 1%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 39.5%;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+    
+}
+.btnn{
+    width: 200px;
+    height: 80px;
+    background: #3498db;
+    border: 4px solid;
+    color: white;
+    font-weight: 700;
+    left: 43.67%;
+    bottom: 47%;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+}
+
+.btnn::before,.btnn::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #242424;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+.btnn::before{
+    top: -4px;
+    left: 10%;
+}
+.btnn::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btnn:hover::before{
+    left: 80%;
+}
+.btnn:hover::after{
+    right: 80%;
+}
+.btnnn{
+    width: 200px;
+    height: 80px;
+    background: #3498db;
+    border: 4px solid;
+    color: white;
+    font-weight: 700;
+    bottom: 47%;
+    right: 35%;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+}
+
+.btnnn::before,.btnnn::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #242424;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+.btnnn::before{
+    top: -4px;
+    left: 10%;
+}
+.btnnn::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btnnn:hover::before{
+    left: 80%;
+}
+.btnnn:hover::after{
+    right: 80%;
+}
