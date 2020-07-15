@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ModzBott - Le Discord Bot</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel=icon href="favicon.png">
+  </head>
+  <body>
+    <div>
+        <h1>ModzBott - Le Discord pour tout le monde</h1>
+        <p>ModzBott est un bot Discord, développé par une seule personne, pour être utilisé par tout le monde.</p>
+      <button class="btn">Changer de langue</button>
+      <a href="https://discord.com/oauth2/authorize?client_id=709030261605793803&permissions=171166800&scope=bot">
+        <button type="submit" class="btn">Inviter à la discorde</button>
+        <a href="">
+        <button type="submit" class="btn">Commencer</button>
+        <ul class="active">
+            <li><a href="https://ModzBottWebsite.lewisderek0508.repl.co">Anglais</a></li>
+            <li><a href="https://ModzBottWebsitePortugese.lewisderek0508.repl.co">Português</a></li>
+            <li><a href="https://ModzBottWebsiteRussian.lewisderek0508.repl.co">русский (Russe)</a></li>
+            <li><a href="https://ModzBottWebsiteChinese.lewisderek0508.repl.co">中文 (Chinois)</a></li>
+            <li><a href="https://ModzBottWebsiteItalian.lewisderek0508.repl.co">Italiano</a></li>
+            <li><a href="https://ModzBottWebsitePolish.lewisderek0508.repl.co">Polskie</a></li>
+        </ul>
+      </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('ul').toggleClass('active')
+            })
+        })
+      </script>
+</html>
