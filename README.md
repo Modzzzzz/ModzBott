@@ -11,9 +11,9 @@
 # ModzBott
 A place where all things to do with the ModzBott is found. Commands that require new contents will hopefully be updated regularly.
 
-### Required Permission: <samp>MANAGE MESSAGES </samp>
+### Required Permission: <samp>MANAGE MESSAGES, READ MESSAGE HISTORY </samp>
 
-<samp> Helpful links: [Support Server](https://discord.gg/nzEnYtZ), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List]()
+<samp> Helpful links: [Support Server](https://discord.gg/nzEnYtZ), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List](https://top.gg/bot/709030261605793803)[Website]()
 
 ### Available Commands:
 ##### m/hello
@@ -71,6 +71,8 @@ A place where all things to do with the ModzBott is found. Commands that require
 ##### m/commands
 >This command sends a rather large embed containing all the command aavailable for ModzBott.       
 > **To use this command use m/commands**
+##### m/config
+>This command allows you to configure the bot to what you want. You can do this by clicking the website link in the embed it sends.
 ##### m/gifmeme
 >This command sends a meme but as a GIF file. Even better than a normal meme.       
 > **To use this command usem/gifmeme.**        
