@@ -31,53 +31,21 @@ A place where all things to do with the ModzBott is found. Commands that require
 >This command tells you how cool you really are. The output is random between 0% and 100%.        
 > <samp>To use this command use **m/cookcheck**. </samp>        
 > **Just like the help command, this command sends the output to the channel it is used in.**
-##### m/needfood
->This command will give you a random food stuff.        
-> <samp>Possible foods: apple, banana, mango, grape, chocolate, pizza, pasta meal, cheese, butter, pancake, cake, cupcake, ice cream. </samp>       
-> **To use this command use m/needfood**.
 ##### m/invite
 >Get an invite link to add the bot to your server.        
 > **To use this command just say m/invite**.
-##### m/quote
->Make the bot send a random inspirational quote from well known people in the world.        
-> **To use this command just use m/quote.       
-> It will send the quote in the channel the command is used in.**
-##### m/meme
->Send a random meme. These memes are chosen from the developer.         
-> **If you have a meme you want added to the bot join the [Support Server](https://discord.gg/nzEnYtZ)**
 ##### m/autoclear
 >Make the bot remove messages automatically. However, you will need another bot to do this. A more updated version is coming soon when the website is implemented. 
 > **If you require support for this please join the [Support Server](https://discord.gg/nzEnYtZ)**
 ##### m/clear
 >This command makes the bot remove 100 messages from the channel the command is used in. This command is way more developed compared to the others. Please refer to **[Clear Details](#clear-parameters)**
-##### m/cutecat
->Using this command will make the bot send a random image of a cute cat or kitten.          
-> **To use this command use m/cutecat**
-> **This command sends the picture to the channel the command was used in.**
-##### m/cutedog
->This command is the exact same as m/cutecat but it is for dogs or puppies.       
-> **To use this command use m/cutedog**       
-> **Just like the cute cat command, this command will send the picture to the channel the command is used in.**
 ##### m/flipcoin
 >This command will make the bot flip in imaginary coin and say the answer.
 > **To use this command use m/flipcoin**        
 > <samp>Possible outcomes: **Heads**, **Tails** </samp>
 ##### m/qpoll
->This command will make the bot add a tick, cross and question mark emoji to your message. Please make sure you put the question in ** ** to be sure people can read the question as it will not remove the command prefix.
-##### m/support
->This command sends the link to the support server.       
-> **To use this command use m/support.**        
-> **This command will sya the embed where the command is used.**
-##### m/commands
->This command sends a rather large embed containing all the command aavailable for ModzBott.       
+>This command will make the bot add a tick, cross and question mark emoji to your message. Please make sure you put the question in ** ** to be sure people can read the question as it will not remove the command prefix.      
 > **To use this command use m/commands**
-##### m/config
->This command allows you to configure the bot to what you want. You can do this by clicking the website link in the embed it sends.
-##### m/gifmeme
->This command sends a meme but as a GIF file. Even better than a normal meme.       
-> **To use this command usem/gifmeme.**        
-> **This command will say the gif meme in the channel the command is used in.**
-
 
 ### Clear parameters.
 >As shows earlier in this document, the clear command is way more developed compared to all the other commands available. This is due to the amount of ways you can use the command. Hence why there is a section in this document talking about the parameters for the **clear command**.     
@@ -104,3 +72,5 @@ A place where all things to do with the ModzBott is found. Commands that require
 > **The bot will not clear messages.** - If the bot does not clear messages make sure that is has the **<samp>MANAGE MESSAGES </samp>** permission. It needs this to function.
 
 > **The auto clear is not working.** - If the auto clear is not working it could mean many things. It could mean that there is a bug in the code or insufficient permissions. Please refer to the permissions (top of README.md) for details on what permission this needs. 
+
+> **My money is not adding up or saving.** - Please let me know in the [support server](https://discord.gg/nzEnYtZ) so i can get a fix for that as soon as possible.
