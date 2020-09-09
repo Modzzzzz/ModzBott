@@ -74,3 +74,5 @@ A place where all things to do with the ModzBott is found. Commands that require
 > **The auto clear is not working.** - If the auto clear is not working it could mean many things. It could mean that there is a bug in the code or insufficient permissions. Please refer to the permissions (top of README.md) for details on what permission this needs. 
 
 > **My money is not adding up or saving.** - Please let me know in the [support server](https://discord.gg/nzEnYtZ) so i can get a fix for that as soon as possible.
+
+> **Why can i not self host this bot?** - Please be patient. Self hosting versions of this bot will soon be ready. Updates to this will come out whenever needed.
