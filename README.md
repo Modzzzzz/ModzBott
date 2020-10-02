@@ -46,6 +46,8 @@ A place where all things to do with the ModzBott is found. Commands that require
 ##### m/qpoll
 >This command will make the bot add a tick, cross and question mark emoji to your message. Please make sure you put the question in ** ** to be sure people can read the question as it will not remove the command prefix.      
 > **To use this command use m/commands**
+##### m/whereami
+>This command will send an embed containing all of the information of the server you are using the command in. It will supply you with the server name, member count and a channel and role count.
 
 ### Clear parameters.
 >As shows earlier in this document, the clear command is way more developed compared to all the other commands available. This is due to the amount of ways you can use the command. Hence why there is a section in this document talking about the parameters for the **clear command**.     
