@@ -13,7 +13,7 @@ A place where all things to do with the ModzBott is found. Commands that require
 
 ### Required Permission: <samp>MANAGE MESSAGES, READ MESSAGE HISTORY </samp>
 
->Helpful links: [Support Server](https://discord.gg/nzEnYtZ), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List](https://top.gg/bot/709030261605793803), [Website](https://ModzBottWebsite.lewisderek0508.repl.co)
+>Helpful links: [Support Server](https://discord.gg/56SadNk), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List](https://top.gg/bot/709030261605793803), [Website](http://modzbott.tk/)
 
 ### Available Commands:
 ##### m/hello
