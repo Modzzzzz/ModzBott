@@ -6,6 +6,8 @@ The table below shows you which versions of ModzBott currently support the secur
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.4.2   | :white_check_mark: |
+| 1.3.1   | :x:                |
 | 1.2.8   | :x:                |
 | 1.2.6   | :x:                |
 | 1.2.3   | :x:                |
