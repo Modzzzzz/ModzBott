@@ -6,6 +6,7 @@ The table below shows you which versions of ModzBott currently support the secur
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.5.2   | :white_check_mark: |
 | 1.4.2   | :white_check_mark: |
 | 1.3.1   | :x:                |
 | 1.2.8   | :x:                |
@@ -18,5 +19,5 @@ If you happen to notice a flaw or vulnerability about this please message Mindof
 
 Once you message, the problem will be solved as soon as it possibly can. 
 
-##### Note to Modz, 
+##### Note to MindOfModz, 
 > Add :white_check_mark: when supported.
