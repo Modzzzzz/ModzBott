@@ -1,0 +1,2658 @@
+import discord
+import asyncio
+from discord.ext import commands
+from webserver import keep_alive
+
+token = ''
+client = commands.Bot(command_prefix='m/')
+client.remove_command('help')
+
+@client.event
+async def on_ready():
+    print('ModzBott online! Server online!')
+
+@client.event
+async def on_message(message):
+    if message.content.startswith('m/help'):
+        if message.author.bot:
+            return
+        else:
+            helpembed = discord.Embed(
+              title="m/help", description="You can find help and support here:", color=discord.Color.purple())
+            helpembed.add_field(name="Github repository", value="A full list of commands can be found here: https://github.com/MindOfModz/ModzBott")
+            helpembed.add_field(name="Discord Bot List", value="Find the bot page here on top.gg: https://top.gg/bot/709030261605793803")
+            helpembed.add_field(name="Support Server", value="Join the support server here for further support: https://discord.gg/z3nPpQM")
+            await message.author.send(embed = helpembed)
+            helpoutput = await message.channel.send('Help was sent to your DMs.')
+            await asyncio.sleep(8)
+            await helpoutput.delete()
+    elif message.content.startswith('m/invite'):
+        if message.author.bot:
+            return
+        else:
+            embed = discord.Embed(
+            title='Invite me to your server.',
+            description=
+            '**Like what i can do? Invite me to your server!**\n\nhttps://discord.com/oauth2/authorize?client_id=709030261605793803&permissions=1476619382&scope=bot',
+            colour=discord.Color.red())
+            invitelink = await message.channel.send(embed=embed)
+
+            await message.delete()
+            await asyncio.sleep(13)
+
+            await invitelink.delete()
+    elif message.content.startswith('m/servercount'):
+        if message.author.bot:
+            return
+        else:
+            servers = list(client.guilds)
+            connected1 = await message.channel.send(
+            f'Connected on {str(len(servers))} servers: ')
+            
+
+            await message.delete()
+            await asyncio.sleep(10)
+            await connected1.delete()
+    elif message.content.startswith('m/clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+            title='channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=100, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+            title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/1clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+            title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=1, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+            title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/2clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+            title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=2, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+            title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/3clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=3, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/4clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=4, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/5clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+            title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=5, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+            title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/6clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+            title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=6, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+            title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/7clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=7, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          tile='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/8clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=8, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/9clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=9, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/10clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=10, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/11clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=11, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/12clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=12, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/13clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=13, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/14clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=14, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/15clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=15, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/16clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=16, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/17clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=17, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/18clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=18, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/19clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=19, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/20clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=2, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/21clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=21, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/22clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=22, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/23clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=23, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/24clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=24, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/25clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=25, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/26clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=26, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/27clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=27, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/28clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=28, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/29clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=29, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/30clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=3, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/31clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=31, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/32clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=32, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/33clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=33, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/34clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=34, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/35clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=35, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/36clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=36, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/37clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=37, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/38clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=38, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/39clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=39, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/40clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=40, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/41clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=41, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/42clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=42, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/43clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=43, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/44clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=44, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/45clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=45, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/46clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=46, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/47clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=47, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/48clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=48, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/49clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=49, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/50clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=50, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/51clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=51, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/52clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=52, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/53clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=53, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/54clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=54, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/55clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=55, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/56clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=56, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/57clear'):
+      if message.author.bot:
+        return
+      else:
+        await message.delete()
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=57, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/58clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=58, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/59clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=59, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/60clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=60, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/61clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=61, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/62clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=62, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/63clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=63, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/64clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=64, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/65clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=65, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/66clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=66, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/67clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=67, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/68clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=68, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/69clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=69, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/70clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=70, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/71clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=71, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/72clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=72, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/73clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=73, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/74clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=74, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/75clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=75, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/76clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=76, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/77clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=77, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/78clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=78, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/79clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=79, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/80clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=80, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/81clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=81, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/82clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=82, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/83clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=83, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/84clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=84, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/85clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=85, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/86clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=86, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/87clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=87, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/88clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=88, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/89clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=89, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/90clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=90, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/91clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=91, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/92clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=92, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/93clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=93, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/94clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=94, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/95clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=95, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/96clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=96, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/97clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=97, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/98clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=98, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+    elif message.content.startswith('m/99clear'):
+      if message.author.bot:
+        return
+      else:
+        clearing = discord.Embed(
+          title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+        clearingoutput = await message.channel.send(embed=clearing)
+        await clearingoutput.delete()
+        await message.channel.purge(limit=99, check=lambda msg: not msg.pinned)
+        done = discord.Embed(
+          title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+        doneoutput = await message.channel.send(embed=done)
+        await asyncio.sleep(13)
+        await doneoutput.delete()
+
+
+
+
+    elif message.content.startswith('m/autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=100, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/1autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=1, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/2autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=2, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/3autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=3, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/4autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=4, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/5autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=5, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/6autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=6, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/7autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=7, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/8autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=8, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/9autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=9, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/10autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=10, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/11autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=11, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/12autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=12, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/13autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=13, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/14autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=14, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/15autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=15, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/16autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=16, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/17autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=17, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/18autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=18, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/19autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=19, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/20autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=20, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/21autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=21, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/22autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=22, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/23autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=23, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/24autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=24, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/25autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=25, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/26autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=26, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/27autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=27, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/28autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=28, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/28autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=28, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/29autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=29, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/30autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=30, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/31autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=31, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/32autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=32, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/33autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=33, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/34autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=34, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/35autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=35, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/36autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=36, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/37autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=37, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/38autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=38, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/39autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=39, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/40autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=40, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/41autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=41, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/42autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=42, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/43autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=43, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/44autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=44, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/45autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=45, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/46autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=46, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/47autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=47, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/48autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=48, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/49autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=49, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/50autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=50, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/51autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=51, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/52autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=52, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/53autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=53, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/54autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=54, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/55autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=55, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/56autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=56, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/57autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=57, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/58autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=58, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/59autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=59, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/60autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=60, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/61autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=61, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/62autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=62, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/63autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=63, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/64autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=64, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/65autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=65, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/66autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=66, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/67autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=67, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/68autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=68, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/69autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=69, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/70autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=70, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/71autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=71, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/72autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=72, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/73autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=73, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/74autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=74, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/75autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=75, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/76autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=76, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/77autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=77, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/78autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=78, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/79autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=79, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/80autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=80, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/81autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=81, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/82autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=82, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/83autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=83, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/84autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=84, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/85autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=85, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/86autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=86, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/87autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=87, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/88autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=88, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/89autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=89, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/90autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=90, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/91autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=91, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/92autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=92, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/93autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=93, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/94autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=94, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/95autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=95, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.ontent.startswith('m/96autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=96, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/97autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=97, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/98autocler'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=98, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+    elif message.content.startswith('m/99autoclear'):
+      clearing = discord.Embed(
+        title='Channel Cleaning.', description='Cleaning of channel in progress.', color=0x252524)
+      clearingoutput = await message.channel.send(embed=clearing)
+      await clearingoutput.delete()
+      await message.channel.purge(limit=99, check=lambda msg: not msg.pinned)
+      done = discord.Embed(
+        title='Channel Cleaning.', description='Successfully cleared the channel!', color=discord.Color.green())
+      doneoutput = await message.channel.send(embed=done)
+      await asyncio.sleep(13)
+      await doneoutput.delete()
+
+
+
+
+
+    elif message.content.startswith('m/ping'):
+      pingoutput1 = await message.channel.send('Pong!')
+      await asyncio.sleep(5)
+      pingoutput2 = await message.channel.send(f'**Currect latency: **{client.latency}')
+      await asyncio.sleep(10)
+      await pingoutput1.delete()
+      await pingoutput2.delete()
+
+
+
+
+
+    elif message.content.startswith('m/whereami'):
+      await message.delete()
+      guild = message.guild
+      membercount = guild.member_count
+      embed = discord.Embed(
+        title='Where am I?',
+        description=f'Information for {guild}',
+        color=discord.Color.blue())
+      embed.add_field(name='**Name:**', value=f'{guild}')
+      embed.add_field(name='**Member Count:**', value=f'{membercount}')
+      await message.channel.send(embed=embed)
+keep_alive()
+client.run(token)
