@@ -1,19 +1,9 @@
-<a href="https://top.gg/bot/709030261605793803" >
-  <img src="https://top.gg/api/widget/status/709030261605793803.svg" alt="ModzBott" />
-</a>
-<a href="https://top.gg/bot/709030261605793803" >
-  <img src="https://top.gg/api/widget/owner/709030261605793803.svg" alt="ModzBott" />
-</a>
-<a href="https://top.gg/bot/709030261605793803" >
-  <img src="https://top.gg/api/widget/lib/709030261605793803.svg" alt="ModzBott" />
-</a>
-
 # ModzBott
 A place where all things to do with the ModzBott is found. Commands that require new contents will hopefully be updated regularly.
 
 ### Required Permission: <samp>MANAGE MESSAGES, READ MESSAGE HISTORY </samp>
 
->Helpful links: [Support Server](https://discord.gg/z3nPpQM), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List](https://top.gg/bot/709030261605793803), [Website](http://modzbott.tk/)
+>Helpful links: [Support Server](https://discord.gg/z3nPpQM), [GitHub Repository](https://github.com/Modzzzzz/ModzBott), [Discord Bot List](https://top.gg/bot/774714577732239421), [Website](http://modzbott.tk/)
 
 ### Available Commands:
 ##### m/magicball
