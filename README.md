@@ -14,6 +14,10 @@ A place where all things to do with the ModzBott is found. This includes command
 ##### m/setprefix
 >Change the prefix of ModzBott to whatever you want it to be for your server. 
 >**Only server admins can use this command**.
+##### m/info
+>This command should only be used if you understand languages and versions.
+>This command will show you all information about the bot client including bot version, language and server count.
+
 
 
 ### Clear Command
@@ -21,3 +25,10 @@ A place where all things to do with the ModzBott is found. This includes command
 
 #### The user will require the <samp>MANAGE MESSAGES</samp> permission to use the command.
 >You can either clear 100 messages or you can clear a certain amount of messages.<br>This command will **NOT** remove pinned messages.<br><br>**m/clear** - This command will clear 100 messages maximum. You can run this command multiple times if you need to clear more than 100 messages.<br><br>**Only people with the manage messages permission can use this.**<br><br>**m/clear [amount]** - This will clear as many messages as you tell it.<br>For example, **m/clear 7** will clear 7 messages.<br><br>You do NOT need the brackets.
+
+### Autoclear Command
+>Here is all the information required for the auto clear command and what you will need for it to work.
+
+#### The user will require the <samp>MANAGE MESSAGES</samp> permission to use the command.
+>Unlike the clear command, this command will respond to other bots within the server.
+>You can either clear 100 messages or you can clear a certain amount of messages.<br>This command will **NOT** remove pinned messages.<br><br>**m/autoclear** - This command will clear 100 messages maximum. You can run this command multiple times if you need to clear more than 100 messages.<br><br>**Only people with the manage messages permission can use this.**<br><br>**m/clear [amount]** - This will clear as many messages as you tell it.<br>For example, **m/autoclear 7** will clear 7 messages.<br><br>You do NOT need the brackets.
