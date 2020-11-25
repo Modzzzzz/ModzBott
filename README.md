@@ -1,6 +1,9 @@
 # ModzBott
 A place where all things to do with the ModzBott is found. This includes commands, parameters and support methods.
 
+# WEBSITE UPDATE
+>The bot will not be receiving a website due to the face that the bot code does not respond to databases of any sort. Once the bot gets higher powered resources this could change however the website will only start off as a command list. The chance of the website having a controllable dashboard is near enough non existant. Sorry for the incovenience but it would be better if the commands and client information was all on the GitHub repo and the top.gg page.
+
 >Helpful links: [Support Server](https://discord.gg/z3nPpQM), [GitHub Repository](https://github.com/MindOfModz/ModzBott), [Discord Bot List](https://top.gg/bot/774714577732239421)
 
 ### Available Commands:
