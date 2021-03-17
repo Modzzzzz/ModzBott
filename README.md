@@ -20,3 +20,6 @@
   - **Setup website SSL Certificate**
   - **Thorough testing**
   - **Block all access until it is ready**
+  - **Add custom prefixes**
+  - **Create Premium Scorpic**
+  - **Revamp Discord Support Server**
