@@ -2,7 +2,7 @@
 
 # Revamp Status
 >The bot will no longer be named as ModzBott and will now be named as Scorpic. The revamp will contain a website, custom connections, shards and so much more! More information ca be found on the wiki! You will no longer be able to view information about the bot until this has been done. Make sure you ***STAR*** the repository for more updates on the bot revamp.
-### Revamp progress: 0.01%
+### Revamp progress: 0.08%
 
 ## Completed
   - **Setup GitHub revamp**
