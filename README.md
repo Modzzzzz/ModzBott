@@ -1,52 +1,62 @@
-# Scorpic
+## Links
+- Command List (Coming soon!)
+- [Support Server](https://discord.gg/RyaSAJ4npE)
 
-# Revamp Status
->The bot will no longer be named as ModzBott and will now be named as Scorpic. The revamp will contain a website, custom connections, shards and so much more! More information ca be found on the wiki! You will no longer be able to view information about the bot until this has been done. Make sure you ***STAR*** the repository for more updates on the bot revamp.
-### Revamp progress: 47.82%
+## Why Should I Add Scorpic?
+- Scorpic is constanly being updated and worked on
+- Everything is free of charge
+- There are no votelocks
+- Reliable bot with almost 24/7 uptime
 
-## To be done
-  - **Create databases**
-  - **Upload website to datacentre**
-  - **Enable website access**
-  - **Setup website SSL Certificate**
-  - **Thorough testing**
-  - **Add custom prefixes**
-  - **Create Premium Scorpic**
+## Moderation
+Moderation on Scorpic is a key feature. Comes with many things to help you run your Discord server. With locking channels, kicking, banning, clearing, create channels, create roles and more is yet to be added!
 
+## What Is Still To Be Added?
+So many features are still needed to be added to Scorpic. Many things that would really help you and your admin team run your server properly. If you would like to request a list of things being added or would like to add a feature you can join the [Support Server](https://discord.gg/RyaSAJ4npE)!
 
-# Scorpic
-
-# Overhaul Status
->The bot is currently having a complete overhaul in both addition of the website, databases and so much more! Follow the [GitHub Repository](https://github.com/mindofmodz/scorpic) for more info!
-## helpful Links:
->Helpful links: [Support Server](https://discord.gg/9cfUgFfxr4), [GitHub Repository](https://github.com/mindofmodz/scorpic)
+## Command List
+Here you will find all available commands for Scorpic!
 
 
-### Default Commands:
-##### s!help
->This command sends an embed containing support methods including the GitHub repository, Support Server and the top.gg page.
-##### s!invite
->Get an invite link to add the bot to your server.
-##### s!whereami
->Show all information about the server. Includes server ID, icon, verification settings and member count.
-##### s!info
->This command should only be used if you understand languages and programming.
->This command will show you all information about the bot client including bot version, language and server count.
+### s!clear
+- This command will clear as many messages as you want from the channel. You can specify how many messsages you want to clear by adding a number to make a command such as **s!clear 4**. Leaving the command blank will clear 100 messages.
+- **Both the user and the bot will require the *manage messages* permission to use this command!**
 
 
+### s!kick 
+- You can kick any member who is breaking rules in your server with this command. You can add a reason for the kick by using **s!kick @user [reason]**. Or if you just want to kick the user without a reason you can use **s!kick @user**
+- **Both the user and the bot will require the *kick members* permission to use this command!**
 
-### Clear Command
->Here is all the required information for the clear command and what you need to use for it to work.
 
-#### The user will ned the <samp>MANAGE MESSAGES</samp> permission to use the command.
->You can either clear 100 messages or you can clear a certain amount of messages.<br>This command will **NOT** remove pinned messages.<br><br>**s!clear** - This command will clear 100 messages maximum. You can run this command multiple times if you need to clear more than 100 messages.<br><br>**Only people with the manage messages permission can use this.**<br><br>**s!clear [amount]** - This will clear as many messages as you tell it.<br>For example, **s!clear 7** will clear 7 messages.<br><br>You do NOT need the brackets.
+### s!ban
+- You can ban any member who is really pushing the limits in your server with this command. You can add a reason for the ban by using **s!ban @user [reason]**. Or if you just want to ban the user without a reason you can use **s!ban @user**
+- **Both the user and the bot will require the *ban members* permission to use this command!**
 
-### Common Issues & FAQ
-#### My bot is offline
->If this is the case you must join the support server as soon as possible to get this issue sorted.
-#### The bot is not responding
->If the bot is not responding try remove it and re add it back to the server. If this still does not work join the support server and the team will help you.
-#### The custom prefix is not sending an output
->This is very common. See the issue above for more info.
-#### Auto clear is not working
->Please join the support server for more support on this issue.
+### s!lock
+- You can lock any channel you want with this command. There are no parameters with this command and an unlock command in under works. You can lock a channel with **s!lock** in that channel.
+- **Both the user and the bot require the *manage channels* permission to use this command!**
+
+### s!whois
+- You can view some simple information on a user with this command. Including user id, status and profile picture. Use **s!whois @user** to receive the message.
+
+### s!serverinfo
+- You can view a nice amount of server information with this command. It will send all the information about the server the command is used in. Use **s!serverinfo** in the server you want to know about.
+
+### s!createchannel
+- You can create any text channels with this simple command. You will need to supply the command with a channel name. This command will only create text channels. **s!createchannel [name]** is the command to do this.
+- **Both the user and the bot require the *manage channels* permission to use this command!**
+
+### s!createvc
+- This command is exactly the same as the createchannel command but you can create voice channels with this command. You will need to supply a channel name to create the channel. **s!createvc [name]** is the command to do this.
+- **Both the user and the bot will require the *manage channels* permission to use this command!**
+
+### s!createrole
+- This command allows you to create a role in your server. You can give it any name. You will need to supply a name to create the role. Colours are currently not support. **s!createrole [name]** is the command to do this.
+- **Both the user and the bot require the *manage roles* permission to use this command!**
+
+## FAQ
+#### None of the commands are working!
+- Make sure both you and the bot have the correct permissions as said in the command list above.
+
+#### The bot is offline!
+- Join the support server immediately after seeing this and make sure to tell a developer or support member.
