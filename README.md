@@ -36,7 +36,7 @@ Here you will find all available commands for Tobor!
 - **Both the user and the bot will require the *ban members* permission to use this command!**
 
 ### t!lock
-- You can lock any channel you want with this command. There are no parameters with this command and an unlock command in under works. You can lock a channel with **t!lock** in that channel.
+- You can lock any channel you want with this command. There are no parameters with this command and an unlock command in under works. You can lock a channel with **t!lock** in that channel. A unlock command is under work and to unlock a channel you will manually need to go into the channel permissions and allow people to  talk.
 - **Both the user and the bot require the *manage channels* permission to use this command!**
 
 ### t!whois
